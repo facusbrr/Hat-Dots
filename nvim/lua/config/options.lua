@@ -8,9 +8,10 @@ function M.setup()
     vim.fn.mkdir(swap_dir, "p")
   end
 
+  -- Limpia todos los swaps al iniciar Neovim
   vim.api.nvim_create_autocmd("VimEnter", {
     callback = function()
-      local cmd = "find " .. swap_dir .. " -type f -name '*.swp' -mtime +1 -delete"
+      local cmd = "find " .. swap_dir .. " -type f -name '*.swp' -delete"
       os.execute(cmd)
     end,
   })
@@ -30,4 +31,3 @@ function M.setup()
 end
 
 return M
-

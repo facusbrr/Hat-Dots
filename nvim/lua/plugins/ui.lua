@@ -122,7 +122,7 @@ return {
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 
-  {
+{
   "folke/snacks.nvim",
   opts = {
     notifier = {},
@@ -148,20 +148,21 @@ return {
     },
     dashboard = {
       sections = {
-        -- Logo personalizado
+        -- Logo personalizado (HEADER)
         { section = "header" },
-        -- Keymaps
-        { icon = " ", title = "Keymaps", section = "keys", indent = 2, padding = 1 },
+        -- Keymaps destacados con color
+        { icon = " ", title = "Keymaps", section = "keys", color = "#E6C384", indent = 2, padding = 1 },
         -- Archivos recientes
-        { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
+        { icon = " ", title = "Recent Files", section = "recent_files", color = "#7E9CD8", indent = 2, padding = 1 },
         -- Proyectos
-        { icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
+        { icon = " ", title = "Projects", section = "projects", color = "#98BB6C", indent = 2, padding = 1 },
         -- Git Status (solo si hay repo git)
         {
           pane = 2,
           icon = " ",
           title = "Git Status",
           section = "terminal",
+          color = "#FFA066",
           enabled = function()
             return Snacks.git.get_root() ~= nil
           end,
@@ -186,6 +187,7 @@ return {
  ░  ░░ ░  ░   ▒     ░
  ░  ░  ░      ░  ░
 ]],
+        -- Acciones rápidas con iconos, atajos y descripciones
         keys = {
           { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
           { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },

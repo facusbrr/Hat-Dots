@@ -25,3 +25,8 @@ require("config.autocommands")
 -- Cargar plugins con lazy.nvim (modularizado en carpeta plugins/)
 require("lazy").setup("plugins")
 
+-- Python version global
+vim.g.python3_host_prog = "/usr/bin/python3"
+
+-- Disable
+vim.g.loaded_perl_provider = 0
