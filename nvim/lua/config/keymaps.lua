@@ -40,6 +40,12 @@ end, { desc = "Cerrar todos excepto el actual" })
 
 ---- Which-Key mappings ----
 wk.add({
+  -- Lazy (Gestor de plugins)
+  { "<leader>L", "<cmd>Lazy<CR>", desc = "Lazy (Gestor de plugins)" },
+
+  -- Notificaciones noice.nvim:
+  { "<leader>N", "<cmd>Noice history<CR>", desc = "Historial de Notificaciones" },
+
   -- Grupo Obsidian
   { "<leader>o", group = "Obsidian" },
   { "<leader>on", "<cmd>ObsidianNew<CR>", desc = "Nueva Nota" },
@@ -69,5 +75,11 @@ wk.add({
   { "<leader>wq", "<cmd>q<CR>", desc = "Cerrar Ventana" },
   { "<leader>wo", "<cmd>only<CR>", desc = "Cerrar otras ventanas" },
   { "<leader>ww", "<C-w>w", desc = "Siguiente ventana" },
+
+  -- Grupo Formateo
+  { "<leader>F", group = "Formatear" },
+  { "<leader>Ff", function() vim.lsp.buf.format() end, desc = "Formatear (default)" },
+  { "<leader>Fp", function() vim.lsp.buf.format({ name = "prettier" }) end, desc = "Formatear con Prettier" },
+  { "<leader>Fb", function() vim.lsp.buf.format({ name = "biome" }) end, desc = "Formatear con Biome" },
   }, { mode = "n" })
 

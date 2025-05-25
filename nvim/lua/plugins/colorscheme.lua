@@ -7,7 +7,7 @@ return {
       require("kanagawa").setup({
         compile = false,
         theme = "dragon",
-        transparent = true,  -- ← Habilita fondo transparente
+        transparent = true, -- ← Habilita fondo transparente
         background = {
           dark = "dragon",
           light = "lotus",
@@ -28,4 +28,3 @@ return {
     end,
   },
 }
-
