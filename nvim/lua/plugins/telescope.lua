@@ -6,14 +6,6 @@ return {
     "nvim-telescope/telescope-fzf-native.nvim", -- Mejor rendimiento
     build = "make",
   },
-  cmd = "Telescope",
-  keys = {
-    { "<leader>ff", "<cmd>Telescope find_files<CR>", desc = "Buscar archivos" },
-    { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Buscar en contenido" },
-    { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buscar buffers" },
-    { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Buscar ayuda" },
-    { "<leader>fs", "<cmd>Telescope current_buffer_fuzzy_find<CR>", desc = "Buscar en buffer actual" },
-  },
   opts = {
     defaults = {
       layout_strategy = "horizontal",
