@@ -4,6 +4,9 @@ Este README proporciona una guía completa para configurar un entorno de desarro
 
 **Última actualización:** 2025-05-26
 
+Set-ExecutionPolicy Bypass -Scope Process -Force
+.\windows\setup.ps1
+
 ## 📋 Tabla de Contenidos
 
 - [Requisitos previos](#requisitos-previos)
