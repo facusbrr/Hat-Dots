@@ -382,4 +382,17 @@ scoop install glow    # Visualizador de markdown en terminal
 
 ---
 
+# 1. Copiar Neovim
+
+Remove-Item -Recurse -Force "windows\nvim" # Opcional: limpia antes de copiar
+Copy-Item -Recurse -Force "$env:LOCALAPPDATA\nvim" "windows\nvim"
+
+# 2. Copiar PowerShell profile
+
+Copy-Item -Force $PROFILE "windows\powershell\profile.ps1"
+
+# 3. Copiar starship.toml
+
+## Copy-Item -Force "$HOME\.config\starship.toml" "windows\starship\starship.toml"
+
 Creado por [facusbrr](https://github.com/facusbrr) | 2025-05-26

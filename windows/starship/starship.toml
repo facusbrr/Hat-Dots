@@ -1,0 +1,135 @@
+# ~/.config/starship.toml
+# =========================================
+# Starship Prompt Configuration
+# Theme: Kanagawa Dragon inspired
+# Terminal prompt for Fish Shell
+# =========================================
+
+format = """\
+$directory\
+$git_branch\
+$fill\
+$nodejs\
+$rust\
+$golang\
+$php\
+$bun\
+$java\
+$c\
+$conda\
+$zig\
+$cmd_duration\
+$time\
+\n$character\
+"""
+
+# Nueva línea entre comandos
+add_newline = true
+command_timeout = 3000
+
+# Kanagawa Dragon Palette
+palette = "kanagawa_dragon"
+
+[fill]
+symbol = " "
+
+[palettes.kanagawa_dragon]
+directory = "#DCD7BA"
+git = "#957FB8"
+nodejs = "#98BB6C"
+rust = "#FF5D62"
+golang = "#7FB4CA"
+php = "#E6C384"
+bun = "#DCD7BA"
+java = "#FF5D62"
+c = "#7FB4CA"
+conda = "#7AA89F"
+zig = "#FFA066"
+duration = "#E6C384"
+time = "#7AA89F"
+text = "#DCD7BA"
+error = "#C34043"
+
+[character]
+success_symbol = "[ރ](bold fg:text)"
+error_symbol = "[ރ](bold fg:error)"
+
+[username]
+style_user = "bold text"
+style_root = "bold error"
+format = "[ރ user]($style)@"
+disabled = false
+show_always = true
+
+[directory]
+format = "[$path]($style)[$read_only]($read_only_style) "
+truncation_length = 2
+style = "fg:directory"
+read_only_style = "fg:error"
+truncation_symbol = "…/"
+read_only = "  "
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[cmd_duration]
+format = " took [ $duration]($style) "
+style = "bold fg:duration"
+min_time = 500
+
+[git_branch]
+format = "[ $branch]($style) "
+style = "bold fg:git"
+
+[git_status]
+format = '[$all_status$ahead_behind ]($style)'
+style = "fg:text"
+
+[docker_context]
+disabled = true
+
+[python]
+symbol = " "
+format = '[${symbol}${pyenv_prefix}(${version})( \($virtualenv\))](fg:conda)'
+version_format = "${raw}"
+
+[java]
+symbol = " "
+format = '[ $symbol ($version) ](fg:java)'
+
+[c]
+symbol = " "
+format = '[ $symbol ($version) ](fg:c)'
+
+[zig]
+symbol = " "
+format = '[ $symbol ($version) ](fg:zig)'
+
+[bun]
+symbol = " "
+format = '[ $symbol ($version) ](fg:bun)'
+
+[nodejs]
+symbol = " "
+format = '[ $symbol ($version) ](fg:nodejs)'
+
+[rust]
+symbol = " "
+format = '[ $symbol ($version) ](fg:rust)'
+
+[golang]
+symbol = " "
+format = '[ $symbol ($version) ](fg:golang)'
+
+[php]
+symbol = " "
+format = '[ $symbol ($version) ](fg:php)'
+
+[time]
+disabled = false
+time_format = "%R"
+format = '[   $time ](fg:time)'
+
