@@ -386,6 +386,7 @@ scoop install glow    # Visualizador de markdown en terminal
 
 Remove-Item -Recurse -Force "windows\nvim" # Opcional: limpia antes de copiar
 Copy-Item -Recurse -Force "$env:LOCALAPPDATA\nvim" "windows\nvim"
+Copy-Item -Force "$env:LOCALAPPDATA\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json" "windows\terminal\settings.json"
 
 # 2. Copiar PowerShell profile
 
