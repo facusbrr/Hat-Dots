@@ -19,11 +19,15 @@ map("n", "<C-s>", function()
   end
 end, { noremap = true, silent = true, desc = "Guardar archivo" })
 
--- Movimiento entre ventanas
-map("n", "<C-h>", "<C-w>h", { desc = "Mover a izquierda" })
-map("n", "<C-j>", "<C-w>j", { desc = "Mover abajo" })
-map("n", "<C-k>", "<C-w>k", { desc = "Mover arriba" })
-map("n", "<C-l>", "<C-w>l", { desc = "Mover a derecha" })
+-- Movimiento entre splits
+vim.keymap.set("n", "<C-h>", "<C-w>h", { desc = "Ventana izquierda" })
+vim.keymap.set("n", "<C-j>", "<C-w>j", { desc = "Ventana abajo" })
+vim.keymap.set("n", "<C-k>", "<C-w>k", { desc = "Ventana arriba" })
+vim.keymap.set("n", "<C-l>", "<C-w>l", { desc = "Ventana derecha" })
+
+-- Guardar archivo
+vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Guardar archivo" })
+vim.keymap.set("i", "<C-s>", "<Esc><cmd>w<cr>", { desc = "Guardar archivo" })
 
 -- Cerrar el highlight
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>", { silent = true, desc = "Limpiar búsqueda" })
@@ -61,7 +65,11 @@ wk.add({
   { "<leader>fg", "<cmd>Telescope live_grep<CR>", desc = "Buscar texto" },
   { "<leader>fb", "<cmd>Telescope buffers<CR>", desc = "Buffers" },
   { "<leader>fh", "<cmd>Telescope help_tags<CR>", desc = "Ayuda" },
-  { "<leader>fc", "<cmd>Telescope find_files cwd=~/.config/nvim<CR>", desc = "Config NVIM" },
+  {
+    "<leader>fc",
+    "<cmd>lua require('telescope.builtin').find_files({cwd = vim.fn.expand('$LOCALAPPDATA/nvim')})<CR>",
+    desc = "Config NVIM",
+  },
 
   -- Grupo Buffers
   { "<leader>b", group = "Buffers" },
