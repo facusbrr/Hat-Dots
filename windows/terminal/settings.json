@@ -1,0 +1,144 @@
+{
+  "$help": "https://aka.ms/terminal-documentation",
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "actions": [
+    {
+      "command": {
+        "action": "closeTab"
+      },
+      "id": "User.closeTab.0"
+    }
+  ],
+  "alwaysShowTabs": true,
+  "copyFormatting": "none",
+  "copyOnSelect": false,
+  "defaultProfile": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+  "keybindings": [
+    {
+      "id": "Terminal.PrevTab",
+      "keys": "ctrl+shift+tab"
+    },
+    {
+      "id": "Terminal.CopyToClipboard",
+      "keys": "ctrl+c"
+    },
+    {
+      "id": "Terminal.SplitPaneDown",
+      "keys": "alt+shift+minus"
+    },
+    {
+      "id": "Terminal.NextTab",
+      "keys": "ctrl+tab"
+    },
+    {
+      "id": "Terminal.OpenNewTab",
+      "keys": "ctrl+t"
+    },
+    {
+      "id": "User.closeTab.0",
+      "keys": "ctrl+w"
+    },
+    {
+      "id": "Terminal.MoveFocusDown",
+      "keys": "alt+down"
+    },
+    {
+      "id": "Terminal.SplitPaneRight",
+      "keys": "alt+shift+plus"
+    },
+    {
+      "id": "Terminal.MoveFocusLeft",
+      "keys": "alt+left"
+    },
+    {
+      "id": "Terminal.MoveFocusRight",
+      "keys": "alt+right"
+    },
+    {
+      "id": "Terminal.MoveFocusUp",
+      "keys": "alt+up"
+    },
+    {
+      "id": "Terminal.PasteFromClipboard",
+      "keys": "ctrl+v"
+    },
+    {
+      "id": "Terminal.DuplicatePaneAuto",
+      "keys": "alt+shift+d"
+    }
+  ],
+  "newTabMenu": [
+    {
+      "type": "remainingProfiles"
+    }
+  ],
+  "profiles": {
+    "defaults": {
+      "colorScheme": "Kanagawa Dragon",
+      "font": {
+        "face": "IosevkaTerm Nerd Font Mono",
+        "size": 16
+      },
+      "opacity": 95,
+      "scrollbarState": "hidden",
+      "useAcrylic": false
+    },
+    "list": [
+      {
+        "adjustIndistinguishableColors": "never",
+        "colorScheme": "Kanagawa Dragon",
+        "font": {
+          "face": "IosevkaTerm Nerd Font Mono",
+          "size": 16
+        },
+        "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
+        "hidden": false,
+        "icon": null,
+        "name": "Powershell",
+        "opacity": 95,
+        "scrollbarState": "hidden",
+        "source": "Windows.Terminal.PowershellCore",
+        "useAcrylic": false
+      },
+      {
+        "guid": "{51855cb2-8cce-5362-8f54-464b92b32386}",
+        "hidden": false,
+        "name": "Ubuntu",
+        "source": "CanonicalGroupLimited.Ubuntu_79rhkp1fndgsc"
+      },
+      {
+        "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+        "hidden": true,
+        "name": "Ubuntu",
+        "source": "Windows.Terminal.Wsl"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "background": "#181616",
+      "black": "#0D0C0C",
+      "blue": "#8BA4B0",
+      "brightBlack": "#625E5A",
+      "brightBlue": "#7FB4CA",
+      "brightCyan": "#7AA89F",
+      "brightGreen": "#87A987",
+      "brightPurple": "#938AA9",
+      "brightRed": "#E46876",
+      "brightWhite": "#C5C9C5",
+      "brightYellow": "#E6C384",
+      "cursorColor": "#C8C093",
+      "cyan": "#8EA4A2",
+      "foreground": "#C5C9C5",
+      "green": "#8A9A7B",
+      "name": "Kanagawa Dragon",
+      "purple": "#A292A3",
+      "red": "#C4746E",
+      "selectionBackground": "#2D4F67",
+      "white": "#C8C093",
+      "yellow": "#C5B28A"
+    }
+  ],
+  "showTabsInTitlebar": true,
+  "themes": []
+}
