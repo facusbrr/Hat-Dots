@@ -3,7 +3,7 @@ return {
   dependencies = {
     "nvim-lua/plenary.nvim",
     "nvim-telescope/telescope-fzf-native.nvim",
-    "nvim-telescope/telescope-ui-select.nvim", -- NUEVO
+    "nvim-telescope/telescope-ui-select.nvim",
     build = "make",
   },
   opts = {
@@ -29,7 +29,7 @@ return {
     },
     extensions = {
       ["ui-select"] = {
-        require("telescope.themes").get_dropdown {},
+        require("telescope.themes").get_dropdown({}),
       },
     },
   },
@@ -39,13 +39,13 @@ return {
     pcall(telescope.load_extension, "fzf")
     pcall(telescope.load_extension, "ui-select")
     -- Colores custom:
-    vim.cmd [[
+    vim.cmd([[
       hi! TelescopePromptBorder guifg=#7E9CD8 guibg=NONE
       hi! TelescopeResultsBorder guifg=#98BB6C guibg=NONE
       hi! TelescopePreviewBorder guifg=#E6C384 guibg=NONE
       hi! TelescopePromptTitle guifg=#C4A7E7 guibg=NONE
       hi! TelescopeResultsTitle guifg=#98BB6C guibg=NONE
       hi! TelescopePreviewTitle guifg=#E6C384 guibg=NONE
-    ]]
+    ]])
   end,
 }

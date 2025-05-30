@@ -122,61 +122,68 @@ return {
     keys = { { "<leader>z", "<cmd>ZenMode<cr>", desc = "Zen Mode" } },
   },
 
-{
-  "folke/snacks.nvim",
-  opts = {
-    notifier = {},
-    image = {},
-    picker = {
-      matcher = {
-        fuzzy = true,
-        smartcase = true,
-        ignorecase = true,
-        filename_bonus = true,
-      },
-      sources = {
-        explorer = {
-          matcher = {
-            fuzzy = true,
-            smartcase = true,
-            ignorecase = true,
-            filename_bonus = true,
-            sort_empty = false,
+  {
+    "folke/snacks.nvim",
+    opts = {
+      notifier = {},
+      image = {},
+      picker = {
+        matcher = {
+          fuzzy = true,
+          smartcase = true,
+          ignorecase = true,
+          filename_bonus = true,
+        },
+        sources = {
+          explorer = {
+            matcher = {
+              fuzzy = true,
+              smartcase = true,
+              ignorecase = true,
+              filename_bonus = true,
+              sort_empty = false,
+            },
           },
         },
       },
-    },
-    dashboard = {
-      sections = {
-        -- Logo personalizado (HEADER)
-        { section = "header" },
-        -- Keymaps destacados con color
-        { icon = " ", title = "Keymaps", section = "keys", color = "#E6C384", indent = 2, padding = 1 },
-        -- Archivos recientes
-        { icon = " ", title = "Recent Files", section = "recent_files", color = "#7E9CD8", indent = 2, padding = 1 },
-        -- Proyectos
-        { icon = " ", title = "Projects", section = "projects", color = "#98BB6C", indent = 2, padding = 1 },
-        -- Git Status (solo si hay repo git)
-        {
-          pane = 2,
-          icon = " ",
-          title = "Git Status",
-          section = "terminal",
-          color = "#FFA066",
-          enabled = function()
-            return Snacks.git.get_root() ~= nil
-          end,
-          cmd = "git status --short --branch --renames",
-          height = 7,
-          padding = 1,
-          ttl = 300,
-          indent = 3,
+      dashboard = {
+        sections = {
+          -- Logo personalizado (HEADER)
+          { section = "header" },
+          -- Keymaps destacados con color
+          { icon = " ", title = "Keymaps", section = "keys", color = "#E6C384", indent = 2, padding = 1 },
+          -- Archivos recientes
+          {
+            icon = " ",
+            title = "Recent Files",
+            section = "recent_files",
+            color = "#7E9CD8",
+            indent = 2,
+            padding = 1,
+          },
+          -- Proyectos
+          { icon = " ", title = "Projects", section = "projects", color = "#98BB6C", indent = 2, padding = 1 },
+          -- Git Status (solo si hay repo git)
+          {
+            pane = 2,
+            icon = " ",
+            title = "Git Status",
+            section = "terminal",
+            color = "#FFA066",
+            enabled = function()
+              return Snacks.git.get_root() ~= nil
+            end,
+            cmd = "git status --short --branch --renames",
+            height = 7,
+            padding = 1,
+            ttl = 300,
+            indent = 3,
+          },
+          -- Startup info
+          { section = "startup" },
         },
-        -- Startup info
-        { section = "startup" },
-      },
-      preset = {
-        header = [[
+        preset = {
+          header = [[
  ██░ ██  ▄▄▄      ▄▄▄█████▓
 ▓██░ ██▒▒████▄    ▓  ██▒ ▓▒
 ▒██▀▀██░▒██  ▀█▄  ▒ ▓██░ ▒░
@@ -187,20 +194,24 @@ return {
  ░  ░░ ░  ░   ▒     ░
  ░  ░  ░      ░  ░
 ]],
-        -- Acciones rápidas con iconos, atajos y descripciones
-        keys = {
-          { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
-          { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
-          { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
-          { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
-          { icon = " ", key = "c", desc = "Config", action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})" },
-          { icon = " ", key = "s", desc = "Restore Session", section = "session" },
-          { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
-          { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
-          { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+          keys = {
+            { icon = " ", key = "f", desc = "Find File", action = ":lua Snacks.dashboard.pick('files')" },
+            { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
+            { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.dashboard.pick('live_grep')" },
+            { icon = " ", key = "r", desc = "Recent Files", action = ":lua Snacks.dashboard.pick('oldfiles')" },
+            {
+              icon = " ",
+              key = "c",
+              desc = "Config",
+              action = ":lua Snacks.dashboard.pick('files', {cwd = vim.fn.stdpath('config')})",
+            },
+            { icon = " ", key = "s", desc = "Restore Session", section = "session" },
+            { icon = " ", key = "x", desc = "Lazy Extras", action = ":LazyExtras" },
+            { icon = "󰒲 ", key = "l", desc = "Lazy", action = ":Lazy" },
+            { icon = " ", key = "q", desc = "Quit", action = ":qa" },
+          },
         },
       },
     },
   },
-}
 }
