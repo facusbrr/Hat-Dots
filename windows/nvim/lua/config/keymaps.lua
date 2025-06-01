@@ -63,6 +63,7 @@ wk.add({
   { "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Abrir en Obsidian" },
   { "<leader>ob", "<cmd>ObsidianBacklinks<CR>", desc = "Backlinks de esta Nota" },
   { "<leader>og", "<cmd>ObsidianSearch<CR>", desc = "Buscar con Grep" },
+  { "<leader>op", "<cmd>ObsidianTemplate<CR>", desc = "Insertar Plantilla" },
 
   -- Grupo Buscar (Telescope)
   { "<leader>f", group = "Buscar" },

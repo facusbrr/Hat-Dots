@@ -27,7 +27,7 @@ return {
       folder = "3-Logs",
       date_format = "%Y-%m-%d",
       alias_format = "%A, %B %d",
-      template = "7-Tmpl/daily.md",
+      template = "daily.md",
     },
 
     templates = {

@@ -1,5 +1,9 @@
 local M = {}
 
+-- Configuración del idioma
+vim.opt.spell = true
+vim.opt.spelllang = { "en", "es" } -- Inglés y Español
+
 function M.setup()
   local swap_dir = vim.fn.expand("~/.local/state/nvim/swap//")
   vim.opt.directory = swap_dir
