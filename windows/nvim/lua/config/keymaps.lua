@@ -54,10 +54,15 @@ wk.add({
 
   -- Grupo Obsidian
   { "<leader>o", group = "Obsidian" },
-  { "<leader>on", "<cmd>ObsidianNew<CR>", desc = "Nueva Nota" },
+  { "<leader>on", "<cmd>ObsidianNew<CR>", desc = "Nueva Nota (Inbox)" },
   { "<leader>of", "<cmd>ObsidianQuickSwitch<CR>", desc = "Buscar Nota" },
-  { "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Nota de Hoy" },
-  { "<leader>od", "<cmd>ObsidianDailies<CR>", desc = "Ver Diarios", group = "Obsidian" },
+  { "<leader>ot", "<cmd>ObsidianToday<CR>", desc = "Nota de Hoy (Logs)" },
+  { "<leader>od", "<cmd>ObsidianDailies<CR>", desc = "Ver Diarios" },
+  { "<leader>ol", "<cmd>ObsidianLink<CR>", desc = "Insertar Enlace" },
+  { "<leader>oi", "<cmd>ObsidianLinkNew<CR>", desc = "Nuevo Enlace y Nota" },
+  { "<leader>oo", "<cmd>ObsidianOpen<CR>", desc = "Abrir en Obsidian" },
+  { "<leader>ob", "<cmd>ObsidianBacklinks<CR>", desc = "Backlinks de esta Nota" },
+  { "<leader>og", "<cmd>ObsidianSearch<CR>", desc = "Buscar con Grep" },
 
   -- Grupo Buscar (Telescope)
   { "<leader>f", group = "Buscar" },
